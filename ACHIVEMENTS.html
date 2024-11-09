@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACHIVEMENTS</title>
+<style>
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000; 
+    color: #fff; 
+  }
+
+  .navbar {
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar li {
+    position: relative;
+  }
+
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+
+  .navbar a:hover {
+    color: #1e90ff; 
+  }
+
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    top: 100%;
+    min-width: 150px;
+    z-index: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 10px 15px;
+    display: block;
+    color: #fff;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #444;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
+  .menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .menu-btn div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  
+  @media (max-width: 768px) {
+    .navbar ul {
+      display: none;
+      flex-direction: column;
+      background-color: #222;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .navbar ul.show {
+      display: flex;
+    }
+
+    .menu-btn {
+      display: flex;
+    }
+  }
+  .achievements-section {
+    margin-top: 20px; 
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+  }
+
+  .achievements-section h1 {
+    text-align: center;
+    font-size: 46px;
+    color: #ffffff;
+    margin-bottom: 25px;
+  }
+
+  .achievement-card {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #000000;
+    
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .achievement-card:hover {
+    transform: scale(1.05);
+    border: 1px solid cyan;
+    box-shadow: 0 3px 5px rgb(72, 79, 76);
+  }
+
+  .achievement-card img {
+    width: 200px;
+    height: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  .achievement-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .achievement-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00e6e6;
+  }
+
+  .achievement-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .achievement-details {
+    font-size: 14px;
+    font-style: italic;
+    color: #c7d6e0;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="HOME.html" style="color: #1e90ff; font-size: 20px; font-weight: bold;">SOUMIK POHI</a>
+  <ul id="navLinks">
+    <li><a href="HOME.html">Home</a></li>
+    
+    <li class="dropdown">
+      <a href="ACHIVEMENTS.html">Achievements</a>
+      <div class="dropdown-content">
+        <a href="ACHIVEMENTS.html">Award 1</a>
+        <a href="ACHIVEMENTS.html">Award 2</a>
+        <a href="ACHIVEMENTS.html">Award 3</a>
+      </div>
+    </li>
+    <li><a href="ABOUT.html">About</a></li>
+    <li><a href="CONTACTS.html">Contact</a></li>
+  </ul>
+  <div class="menu-btn" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
+  }
+</script>
+<div class="achievements-section">
+    <h1>Achievements</h1>
+    
+    
+    <div class="achievement-card">
+      <img src="./images/1730485887448.jpg" alt="Cycling Achievement">
+      <div class="achievement-content">
+        <div class="achievement-title">The Golden Boy "SOUMIK"</div>
+        <div class="achievement-description">
+          The 38th state road cycling championship of Odisha was organized by Bhadrak Dist. Cycling Association from 12th to 13th November 2022.
+        </div>
+        <div class="achievement-details">
+          A record of 2 Gold medals was achieved in:
+          <ul>
+            <li>40km Mass Start</li>
+            <li>20km Individual Time Trial</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="achievement-card">
+      <img src="./images/1730485887395.png" alt="Cycling Achievement">
+      <div class="achievement-content">
+        <div class="achievement-title">Breaking the "RECORDS"</div>
+        <div class="achievement-description">
+          39th State Road Cycling Championship 2023 - This hyper-competitive 
+          event was held in the freezing cold of December at Puri, Odisha.
+        </div>
+        <div class="achievement-details">
+          Clinched 2 Gold medals in:
+          <ul>
+            <li>40km Mass Start</li>
+            <li>20km Individual Time Trial</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="achievement-card">
+        <img src="./images/20240223_172506.jpg" alt="Cycling Achievement">
+        <div class="achievement-content">
+          <div class="achievement-title">"CHIEF MINISTER Awardee"</div>
+          <div class="achievement-description">
+           After representing TEAM ODISHA in numerous cycling events. Received the Emerging Sportsperson 'Youth' 
+           Award by Honourable Chief Minister Mr. NAVIN PATTNAIK. 
+          </div>
+          
+        </div>
+      </div>
+      <div class="achievement-card" id="card1">
+        <img src="./images/1730485887369.jpg" alt="Cycling Achievement">
+        <div class="achievement-content">
+          <div class="achievement-title">National Road cycling championship 2022,Nashik</div>
+          <div class="achievement-description">
+            This event took place in the month of January 2023, A tough competition
+                    with the riders from all arround India, Soumik Pohi from Odisha secured the TOP 10 position
+                     in the championship, sellecting himself in the National Centre Of Excellence, Guwhati, Assam.
+          </div>
+          <div class="achievement-details">
+            The TOP-10 postition was achieved.
+            
+          </div>
+        </div>
+      </div>
+      <div class="achievement-card">
+        <img src="./images/1730485887432.png" alt="Cycling Achievement">
+        <div class="achievement-content">
+          <div class="achievement-title">KHELO INDIA YOUTH GAMES 2024</div>
+          <div class="achievement-description">
+            The participation in the YOUTH GAMES was also 
+                    an achievement as only top athletes from all over INDIA 
+                    get a chance to take part in this championship.
+          </div>
+      </div>
+      </div>
+  </div>
+
+</body>
+</html>

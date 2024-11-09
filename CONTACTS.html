@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>contacts</title>
+<style>
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000; 
+    color: #fff; 
+  }
+
+  .navbar {
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar li {
+    position: relative;
+  }
+
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+
+  .navbar a:hover {
+    color: #1e90ff; 
+  }
+
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    top: 100%;
+    min-width: 150px;
+    z-index: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content a {
+    padding: 10px 15px;
+    display: block;
+    color: #fff;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #444;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
+  .menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .menu-btn div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  
+  @media (max-width: 768px) {
+    .navbar ul {
+      display: none;
+      flex-direction: column;
+      background-color: #222;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .navbar ul.show {
+      display: flex;
+    }
+
+    .menu-btn {
+      display: flex;
+    }
+  }
+
+    
+
+    #submit{
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+
+    #submit:hover{
+      background-color: aqua;
+      color: #000;
+      transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="HOME.html" style="color: #1e90ff; font-size: 20px; font-weight: bold;">SOUMIK POHI</a>
+  <ul id="navLinks">
+    <li><a href="HOME.html">Home</a></li>
+    
+    <li class="dropdown">
+      <a href="ACHIVEMENTS.html">Achievements</a>
+      <div class="dropdown-content">
+        <a href="ACHIVEMENTS.html">Award 1</a>
+        <a href="ACHIVEMENTS.html">Award 2</a>
+        <a href="ACHIVEMENTS.html">Award 3</a>
+      </div>
+    </li>
+    <li><a href="ABOUT.html">About</a></li>
+    <li><a href="CONTACTS.html">Contact</a></li>
+  </ul>
+  <div class="menu-btn" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
+  }
+</script>
+<div style="margin: 100px;
+border: 1px solid cyan;
+border-radius: 8px;
+color:antiquewhite;
+text-align: center;
+margin-top: 50px;
+padding-bottom: 100px;
+background-image: url(./images/Picsart_24-09-21_12-07-52-742.jpg);
+background-size: cover;">
+<div style ="border: 1px solid black;
+margin: 50px;
+margin-left: 250px ;
+margin-right: 250px;
+border-radius: 8px;
+background-color: #0e0e0ec6;">
+<h1 style="margin-top: 10px;
+margin-bottom: 10px;
+">Contact me</h1>
+
+  <div style="margin-bottom:20px ;">
+  <label for="name" id="name">Your Name:</label>
+  <input type="text" id="name">
+  <br><br><br>
+  <label for="mobile">Your Mobile: </label>
+  <input type="number" id="mobile">
+  <br><br><br>
+  <label for="email">Your Email: </label>
+  <input type="text" id="email">
+  <br>
+  </div>
+  
+</div>
+<div id="sub">
+  <input type="submit" value="Submit" id="submit">
+</div>
+</div>
+
+
+</body>
+</html>
